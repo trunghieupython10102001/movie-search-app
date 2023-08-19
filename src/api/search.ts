@@ -20,3 +20,10 @@ export const search = async ({ title, type, page }: SearchParams) => {
   );
   return res;
 };
+
+export const searchById = async ({ id }: { id?: string }) => {
+  const res = await fetch(
+    `https://www.omdbapi.com/?i=${id}&apikey=${MOVIE_API_KEY}`
+  );
+  return res;
+};

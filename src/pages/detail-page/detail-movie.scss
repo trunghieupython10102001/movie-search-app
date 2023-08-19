@@ -1,0 +1,27 @@
+.detail-movie {
+  max-width: 120rem;
+  margin: auto;
+  padding-top: 3rem;
+  display: flex;
+  gap: 2.4rem;
+
+  .right {
+    .detail-movie-title {
+      font-size: 3rem;
+      margin-top: 1rem;
+    }
+
+    .detail-movie-plot {
+      font-size: 2rem;
+      margin-top: 1rem;
+    }
+
+    .detail-movie-ratings {
+      font-size: 1.6rem;
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }
+}
