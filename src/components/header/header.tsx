@@ -2,13 +2,13 @@ import React, { useEffect, useState } from "react";
 import "./header.scss";
 import { search } from "../../api/search";
 import { useDebounce } from "../../hooks/debouce";
-import { useDispatch } from "react-redux";
-import { setMovies } from "../../app/services/movie";
+import { useDispatch, useSelector } from "react-redux";
+import { getpage, setMovies, setTotal } from "../../app/services/movie";
 
 export const Header = () => {
   const [query, setQuery] = useState("");
   const dispatch = useDispatch();
-  const [page, setPage] = useState(1);
+  const page = useSelector(getpage);
   const searchQuery = useDebounce(query, 500);
 
   const onChange = (e: React.FormEvent<HTMLInputElement>) => {
@@ -24,6 +24,7 @@ export const Header = () => {
         .then((res) => res.json())
         .then((data) => {
           dispatch(setMovies(data.Search ?? []));
+          dispatch(setTotal(data.totalResults ?? 0));
         });
     };
 

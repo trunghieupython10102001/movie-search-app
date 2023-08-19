@@ -1,0 +1,35 @@
+.home {
+  max-width: 120rem;
+  margin: auto;
+  padding-top: 2.4rem;
+
+  .movie-result {
+    display: flex;
+    margin-bottom: 2.4rem;
+    align-items: center;
+    justify-content: space-between;
+
+    .pagin-btns {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      .pagin-btn {
+        border: none;
+        padding: 6px 10px;
+        border-radius: 4px;
+      }
+    }
+  }
+
+  .empty-result {
+    margin-bottom: 2.4rem;
+  }
+
+  .movies-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+  }
+}

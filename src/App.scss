@@ -1,8 +1,10 @@
 .App {
-  background-color: #000;
-
   .main-page {
     margin-top: 6.4rem;
     min-height: calc(100vh - 6.4rem);
   }
+}
+
+body {
+  background-color: #000;
 }
