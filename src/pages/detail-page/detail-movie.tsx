@@ -45,7 +45,7 @@ export const DetailMovie = () => {
             <div className="detail-movie-plot">{movie.Plot}</div>
             <div className="detail-movie-ratings">
               {movie.Ratings.map((rating) => (
-                <div>
+                <div key={rating.Source}>
                   <div>
                     {rating.Source}: {rating.Value}
                   </div>
